@@ -1,102 +1,85 @@
 import React from 'react'
-import CssLogo from '../assets/Skills/CsssLogo.png';
-import HtmlLogo from '../assets/Skills/HtmlLogo.png';
-import JsLogo from '../assets/Skills/JsLogo.webp';
-import ReactLogo from '../assets/Skills/ReactLogo.jpeg';
-import CLogo from '../assets/Skills/clogo-1.webp';
-import PythonLogo from '../assets/Skills/PythonLogo.jpeg';
-import TailLogo from '../assets/Skills/TailLogo.jpeg';
-import ResponLogo from '../assets/Skills/ResponLogo.png';
-import Git from '../assets/Skills/Git.png'
+import { HiCode, HiDatabase, HiTerminal, HiLightningBolt } from 'react-icons/hi';
 
 const Experience = () => {
 
-  const skills = [
+  const skillCategories = [
     {
-      id:1,
-      src:HtmlLogo,
-      name:'Html',
-      style:'shadow-orange-400'
+      title: "Frontend",
+      icon: <HiCode className="text-cyan-400" size={25} />,
+      skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Ant Design", "React Native"]
     },
     {
-      id:2,
-      src:CssLogo,
-      name:'CSS',
-      style:'shadow-indigo-300'
+      title: "Backend",
+      icon: <HiLightningBolt className="text-blue-400" size={25} />,
+      skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "API Integration"]
     },
     {
-      id:3,
-      src:TailLogo,
-      name:'Tailwind',
-      style:'shadow-cyan-300'
+      title: "Database",
+      icon: <HiDatabase className="text-indigo-400" size={25} />,
+      skills: ["MongoDB", "Schema Design", "Aggregation"]
     },
     {
-      id:4,
-      src:JsLogo,
-      name:'Javascript',
-      style:'shadow-yellow-300'
+      title: "DevOps",
+      icon: <HiTerminal className="text-emerald-400" size={25} />,
+      skills: ["Docker", "CI/CD", "Jenkins", "Vercel", "Render", "GitHub Actions"]
     },
     {
-      id:5,
-      src:ReactLogo,
-      name:'React Js',
-      style:'shadow-blue-200'
-    },
-    {
-      id:6,
-      src:PythonLogo,
-      name:'Python',
-      style:'shadow-yellow-300'
-    },
-    {
-      id:7,
-      src:CLogo,
-      name:'C',
-      style:'shadow-indigo-950'
-    },
-    {
-      id:8,
-      src:ResponLogo,
-      name:'Responsiv',
-      style:'shadow-slate-950'
-    },
-    {
-      id:9,
-      src:Git,
-      name:'GitHub',
-      style:'shadow-gray-950'
+      title: "Architecture & Tools",
+      icon: <HiCode className="text-purple-400" size={25} />,
+      skills: ["Microservices", "AI Integrations", "Git", "GitHub"]
     }
-  ] 
+  ]
 
   return (
-    <div name="skills" className='pt-16 md:pt-24 bg-gradient-to-b from-[#ab9abe] to-[#929292] w-full  h-full'>
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center  h-full  w-full'>
-      <div className=''>
-          <p className='text-[#313035] text-md md:text-xl'>
-            Skills and Tools
+    <div name="skills" className='pt-16 md:pt-24 bg-black w-full min-h-screen text-white'>
+      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
+        
+        <div className='pb-12'>
+          <p className='text-cyan-400 text-sm md:text-md uppercase tracking-[0.3em] font-bold mb-2'>
+            Technical Expertise
           </p>     
-           <p className='text-2xl md:text-4xl font-bold inline border-b-4 border-gray-500'>
-            My Toolbox & Things I Can Do
+          <p className='text-4xl md:text-6xl font-bold inline border-b-4 border-cyan-500 tracking-tighter'>
+            My Skills
           </p>
-          <p className='py-6'>
-            The skills,tools and technologies I knew
+          <p className='py-6 text-slate-400 text-lg'>
+            A comprehensive overview of my <span className='text-white font-medium'>Full Stack Ecosystem</span>
           </p>
         </div>
-        <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
-          {skills.map(({id,src,name,style}) => (
-            <div
-             key={id}
-             className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
-            <img src={src} alt='' className='w-20 mx-auto'/>
-            <p className='mt-4'>{name}</p>
-          </div>
+
+        {/* Skill Category Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {skillCategories.map(({ title, icon, skills }, index) => (
+            <div 
+              key={index} 
+              className='bg-white/5 border border-white/10 p-8 rounded-[2.5rem] hover:border-cyan-500/30 transition-all duration-500 group'
+            >
+              <div className='flex items-center gap-4 mb-6'>
+                <div className='p-3 bg-black rounded-2xl border border-white/10 group-hover:border-cyan-500/50 transition-colors'>
+                  {icon}
+                </div>
+                <h3 className='text-2xl font-bold tracking-tight'>{title}</h3>
+              </div>
+
+              <div className='flex flex-wrap gap-3'>
+                {skills.map((skill, i) => (
+                  <span 
+                    key={i} 
+                    className='px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-slate-300 hover:text-white hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 cursor-default'
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
-          
         </div>
-        {/* <div>
-        <p>Currently Working on:</p>
-        <p>Improving my skills in, and understanding of --- .Also having fun with #100DaysOfCode building and animating things via CSS.</p>
-      </div> */}
+
+        {/* Learning Footnote */}
+        <div className='mt-16 p-6 rounded-2xl border border-white/5 bg-gradient-to-r from-cyan-500/10 to-transparent italic text-slate-400 text-sm'>
+           <span className='text-cyan-400 font-bold'>Latest Focus:</span> Currently exploring scalable microservices architecture, improving CI/CD workflows, and experimenting with AI-powered web applications.
+        </div>
+
       </div>
     </div>
   )

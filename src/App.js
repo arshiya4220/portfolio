@@ -13,9 +13,11 @@ function App() {
     <Home />
     <SocioLinks />
     <About />
-    <Portfolio />
+        <Experience />
+
     <Education />
-    <Experience />
+        <Portfolio />
+
     <Contact />
   </div>
   );

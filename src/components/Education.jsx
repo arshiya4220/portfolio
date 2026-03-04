@@ -1,261 +1,135 @@
-// import React from 'react';
-// import Timeline from '@mui/lab/Timeline';
-// import TimelineItem from '@mui/lab/TimelineItem';
-// import TimelineSeparator from '@mui/lab/TimelineSeparator';
-// import TimelineConnector from '@mui/lab/TimelineConnector';
-// import TimelineContent from '@mui/lab/TimelineContent';
-// import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-// import TimelineDot from '@mui/lab/TimelineDot';
-// import FastfoodIcon from '@mui/icons-material/Fastfood';
-// import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-// import HotelIcon from '@mui/icons-material/Hotel';
-// import RepeatIcon from '@mui/icons-material/Repeat';
-// import Typography from '@mui/material/Typography';
-
-// const Education = () => {
-//   return (
-//     <div name="education" className='w-full  pt-16 md:pt-24 h-full bg-gradient-to-t from-[#ab9abe] to-[#929292]'>
-//     <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-//         <div className='pb-8 '>
-//             <p className='text-2xl md:text-4xl font-bold inline border-b-4 border-gray-500'>
-//                 TimeLine
-//             </p>
-//         </div>
-//         <div>
-//         <Timeline position="alternate">
-//       <TimelineItem>
-//         <TimelineOppositeContent
-//           sx={{ m: 'auto 0' }}
-//           align="right"
-//           variant="body2"
-//           color="text.secondary"
-//         >
-//           9:30 am
-//         </TimelineOppositeContent>
-//         <TimelineSeparator>
-//           <TimelineConnector />
-//           <TimelineDot>
-//             <FastfoodIcon />
-//           </TimelineDot>
-//           <TimelineConnector />
-//         </TimelineSeparator>
-//         <TimelineContent sx={{ py: '12px', px: 2 }}>
-//           <Typography variant="h6" component="span">
-//             Eat
-//           </Typography>
-//           <Typography>Because you need strength</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-//       <TimelineItem>
-//         <TimelineOppositeContent
-//           sx={{ m: 'auto 0' }}
-//           variant="body2"
-//           color="text.secondary"
-//         >
-//           10:00 am
-//         </TimelineOppositeContent>
-//         <TimelineSeparator>
-//           <TimelineConnector />
-//           <TimelineDot color="primary">
-//             <LaptopMacIcon />
-//           </TimelineDot>
-//           <TimelineConnector />
-//         </TimelineSeparator>
-//         <TimelineContent sx={{ py: '12px', px: 2 }}>
-//           <Typography variant="h6" component="span">
-//             Code
-//           </Typography>
-//           <Typography>Because it&apos;s awesome!</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-//       <TimelineItem>
-//         <TimelineSeparator>
-//           <TimelineConnector />
-//           <TimelineDot color="primary" variant="outlined">
-//             <HotelIcon />
-//           </TimelineDot>
-//           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-//         </TimelineSeparator>
-//         <TimelineContent sx={{ py: '12px', px: 2 }}>
-//           <Typography variant="h6" component="span">
-//             Sleep
-//           </Typography>
-//           <Typography>Because you need rest</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-//       <TimelineItem>
-//         <TimelineSeparator>
-//           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-//           <TimelineDot color="secondary">
-//             <RepeatIcon />
-//           </TimelineDot>
-//           <TimelineConnector />
-//         </TimelineSeparator>
-//         <TimelineContent sx={{ py: '12px', px: 2 }}>
-//           <Typography variant="h6" component="span">
-//             Repeat
-//           </Typography>
-//           <Typography>Because this is the life you love!</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-//     </Timeline>
-//         </div>
-//     </div>
-// </div>
-//   )
-// }
-
-// export default Education
-
-
-
-
 import React from 'react';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import { LuAlignStartVertical, LuListStart, LuSchool } from "react-icons/lu";
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { TbDeviceIpadHorizontalStar, TbSchool } from "react-icons/tb";
-import {HiBookmark, HiDesktopComputer, HiGift, HiLightBulb, HiShieldCheck, HiSortAscending, HiSortDescending, HiTrendingUp} from 'react-icons/hi'
+import { LuSchool } from "react-icons/lu";
+import { TbSchool } from "react-icons/tb";
+import { HiBookmark, HiDesktopComputer, HiSortAscending, HiSortDescending, HiSparkles, HiLightBulb } from 'react-icons/hi';
 
 const Education = () => {
     return (
-      <div name="education" className='w-full  pt-16 md:pt-24 h-full bg-gradient-to-t from-[#ab9abe] to-[#929292] z-10'>
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-               <div className='pb-8 '>
-                  <p className='text-2xl md:text-4xl font-bold inline border-b-4 border-gray-500'>
-                   TimeLine
-               </p>
+        <div name="education" className='w-full pt-16 md:pt-24 bg-black text-white overflow-hidden'>
+            <style>
+                {`
+                    .vertical-timeline::before { background: rgba(255, 255, 255, 0.1) !important; }
+                    .vertical-timeline-element-date { color: #94a3b8 !important; font-weight: 600 !important; }
+                    @media only screen and (min-width: 1170px) {
+                        .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+                            left: 125% !important;
+                        }
+                    }
+                `}
+            </style>
+
+            <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
+                
+                <div className='pb-12 text-center md:text-left'>
+                    <p className='text-4xl md:text-6xl font-bold inline border-b-4 border-cyan-500 tracking-tighter'>
+                        Roadmap
+                    </p>
+                    <p className='py-6 text-slate-400 text-lg'>
+                        A timeline of my <span className='text-cyan-400'>professional growth</span> and academic foundation
+                    </p>
+                </div>
+
+                <VerticalTimeline animate={true} lineColor='rgba(255, 255, 255, 0.1)'>
+                    
+                    {/* START */}
+                    <VerticalTimelineElement
+                        iconStyle={{ background: '#000', color: '#06b6d4', border: '2px solid #06b6d4', boxShadow: '0 0 15px rgba(6,182,212,0.2)' }}
+                        icon={<HiSortDescending />}
+                    />
+
+                    {/* 1. CURRENT ROLE */}
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        contentStyle={{ 
+                            background: 'linear-gradient(to right, rgba(6, 182, 212, 0.1), rgba(255, 255, 255, 0.03))', 
+                            border: '1px solid rgba(6, 182, 212, 0.3)',
+                            borderRadius: '24px',
+                            backdropFilter: 'blur(10px)',
+                        }}
+                        contentArrowStyle={{ borderRight: '7px solid rgba(6, 182, 212, 0.3)' }}
+                        date="2024 — PRESENT"
+                        iconStyle={{ background: '#000', color: '#06b6d4', border: '2px solid #06b6d4', boxShadow: '0 0 20px rgba(6,182,212,0.4)' }}
+                        icon={<HiSparkles />}
+                    >
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="bg-cyan-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Current</span>
+                            <h3 className="text-xl font-bold text-white">Full Stack Developer</h3>
+                        </div>
+                        <h4 className="text-cyan-400 text-sm font-medium mb-2 uppercase tracking-wider">Professional Experience</h4>
+                        <p className="text-slate-400 text-sm">Building AI-driven platforms, designing dynamic content engines, and optimizing full-stack architectures.</p>
+                    </VerticalTimelineElement>
+
+                    {/* 2. COLLEGE */}
+                    <VerticalTimelineElement
+                        date="2020 — 2024"
+                        contentStyle={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px' }}
+                        iconStyle={{ background: '#000', color: '#06b6d4', border: '2px solid #06b6d4' }}
+                        icon={<TbSchool />}
+                    >
+                        <h3 className="text-xl font-bold text-white">CS Engineering</h3>
+                        <h4 className="text-slate-300 text-sm mb-2">Mohamed Sathak Engineering College</h4>
+                        <p className="text-slate-400 text-sm">Graduated with <span className="text-white">9.0 CGPA</span>. Received the <span className="text-cyan-400 italic">Best Outgoing Student</span> Award.</p>
+                    </VerticalTimelineElement>
+
+                    {/* 3. INTERN */}
+                    <VerticalTimelineElement
+                        date="2023 (MAR - JUN)"
+                        contentStyle={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px' }}
+                        iconStyle={{ background: '#000', color: '#3b82f6', border: '2px solid #3b82f6' }}
+                        icon={<HiDesktopComputer />}
+                    >
+                        <h3 className="text-xl font-bold text-white">Software Intern</h3>
+                        <h4 className="text-blue-400 text-sm mb-2">Aroopa Tech Pvt Ltd</h4>
+                        <p className="text-slate-400 text-sm">Gained hands-on experience in full-stack project development in the college incubation center.</p>
+                    </VerticalTimelineElement>
+
+                    {/* 4. AWARDS & SYMPOSIUMS */}
+                    <VerticalTimelineElement
+                        date="2022 — 2023"
+                        contentStyle={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px' }}
+                        iconStyle={{ background: '#000', color: '#06b6d4', border: '2px solid #06b6d4' }}
+                        icon={<HiLightBulb />}
+                    >
+                        <h3 className="text-xl font-bold text-white">Winner / Runner</h3>
+                        <h4 className="text-cyan-400 text-sm mb-2 uppercase">Agri-IOT & Symposiums</h4>
+                        <p className="text-slate-400 text-sm">Won multiple presentation awards at Anna University and Syed Ammal Engineering College.</p>
+                    </VerticalTimelineElement>
+
+                    {/* 5. SCHOOLING - HSC */}
+                    <VerticalTimelineElement
+                        date="2019 — 2020"
+                        contentStyle={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px' }}
+                        iconStyle={{ background: '#000', color: '#94a3b8', border: '2px solid #94a3b8' }}
+                        icon={<LuSchool />}
+                    >
+                        <h3 className="text-xl font-bold text-white">HSC (Higher Secondary)</h3>
+                        <h4 className="text-slate-400 text-sm mb-2">Elite Matriculation School, Ervadi</h4>
+                        <p className="text-slate-400 text-sm">Completed with <span className="text-white font-bold">87%</span>.</p>
+                    </VerticalTimelineElement>
+
+                    {/* 6. SCHOOLING - SSLC */}
+                    <VerticalTimelineElement
+                        date="2017 — 2018"
+                        contentStyle={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px' }}
+                        iconStyle={{ background: '#000', color: '#94a3b8', border: '2px solid #94a3b8' }}
+                        icon={<LuSchool />}
+                    >
+                        <h3 className="text-xl font-bold text-white">SSLC</h3>
+                        <h4 className="text-slate-400 text-sm mb-2">Elite Matriculation School, Ervadi</h4>
+                        <p className="text-slate-400 text-sm">Completed with <span className="text-white font-bold">96%</span>.</p>
+                    </VerticalTimelineElement>
+
+                    {/* END */}
+                    <VerticalTimelineElement
+                        iconStyle={{ background: '#000', color: '#06b6d4', border: '2px solid #06b6d4', boxShadow: '0 0 15px rgba(6,182,212,0.2)' }}
+                        icon={<HiSortAscending />}
+                    />
+                </VerticalTimeline>
             </div>
-<VerticalTimeline
-lineColor='rgb(235 226 245 / 51%)'>
-<VerticalTimelineElement
-    iconStyle={{ background: '#a055f5', color: '#000' }}
-    icon={<HiSortDescending />}
-  />
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    position='left'
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159, 122, 205)', color: '#000',borderTop:'1px solid #fff',borderRight:'1px solid #fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-    date="2020-2024"
-    iconStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000' }}
-    icon={<TbSchool />}
-  >
-    <h3 className="vertical-timeline-element-title">Computer Science Engineering</h3>
-    <h4 className="vertical-timeline-element-subtitle">Mohamed Sathak Engineering College , Kilakarai</h4>
-    <p>
-      CGP: 9/10 <br/>
-      Best Outgoing Student Award as TOPPER
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    position='right'
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000' ,borderTop:'1px solid #fff',borderRight:'1px solid #fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-    date="2023 (March - June)"
-      iconStyle={{ background: '#6f55f5', color: '#000' }}
-    icon={< HiDesktopComputer />}
-  >
-    <h3 className="vertical-timeline-element-title">INTERN</h3>
-    <h4 className="vertical-timeline-element-subtitle">Aroopa Tech Pvt Ltd, Chennai</h4>
-    <p>
-      Worked as Intern for two months and On-Project for two months in the incubation centre at my college.
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2023 (February)"
-    position = "right"
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000',borderTop:'1px solid #fff',borderRight:'1px solid #fff' ,borderLeft:'1px solid #fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-      iconStyle={{ background: 'rgb(233, 30, 99)', color: 'rgb(171 154 190)' }}
-    icon={<HiBookmark />}
-  >
-    <h3 className="vertical-timeline-element-title">WINNER</h3>
-    <h4 className="vertical-timeline-element-subtitle">Inter-College Competition</h4>
-    <p>
-      Qualified to district level on topic - Agri and IOT, ppt competition held at my college. 
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="2022 (September)"
-    position= "right"
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000',borderTop:'1px solid #fff',borderRight:'1px solid #fff' ,borderLeft:'1px solid #fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#000' }}
-    icon={<HiLightBulb/>}
-  >
-    <h3 className="vertical-timeline-element-title">RUNNER</h3>
-    <h4 className="vertical-timeline-element-subtitle">Symposium,Syed Ammal Engineering College - Ramanathapuram</h4>
-    <p>
-      Presented on - IOT
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2022 (August)"
-    position = "right"
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000',borderTop:'1px solid #fff',borderRight:'1px solid #fff' ,borderLeft:'1px solid #fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-      iconStyle={{ background: '#5585f5', color: '#000' }}
-    icon={<HiShieldCheck />}
-  >
-    <h3 className="vertical-timeline-element-title">WINNER - Presentation</h3>
-    <h4 className="vertical-timeline-element-subtitle">TechFizo, Anna University - Ramanathapuram</h4>
-    <p>
-      Presented on - IOT
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    position='left'
-    date="2019 - 2020"
-    iconStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000' }}
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000' ,borderTop:'1px solid #fff',borderRight:'1px solid #fff' ,borderLeft:'1px solid #fff'}}
-    contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-    icon={<LuSchool />}
-  >
-    <h3 className="vertical-timeline-element-title">Higher Secondary Second Year</h3>
-    <h4 className="vertical-timeline-element-subtitle">Elite Matriculation Higher Secondary School , Ervadi</h4>
-    <p>
-      Percentage: 87%
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="2018 - 2019"
-    contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000',borderTop:'1px solid #fff',borderRight:'1px solid #fff' ,borderLeft:'1px solid #fff' }}
-    iconStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000' }}
-    icon={<LuSchool />}
-  >
-    <h3 className="vertical-timeline-element-title">Higher Secondary First Year</h3>
-    <h4 className="vertical-timeline-element-subtitle">Elite Matriculation Higher Secondary School , Ervadi</h4>
-    <p>
-      Percentage: 77%
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="2017 - 2018"
-    contentStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000',borderTop:'1px solid #fff',borderRight:'1px solid #fff' ,borderLeft:'1px solid #fff' }}
-    iconStyle={{ backgroundImage: 'linear-gradient(to top, #d6c8e5, rgb(159 142 165), rgb(159, 122, 205)', color: '#000' }}
-    icon={<LuSchool />}
-  >
-    <h3 className="vertical-timeline-element-title">SSLC</h3>
-    <h4 className="vertical-timeline-element-subtitle">Elite Matriculation Higher Secondary School , Ervadi</h4>
-    <p>
-      Percentage: 96%
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    iconStyle={{ background: '#a055f5', color: '#000' }}
-    icon={<HiSortAscending />}
-  />
-</VerticalTimeline>
-</div>
-</div>
-    )}
-export default Education
+        </div>
+    );
+};
+
+export default Education;
