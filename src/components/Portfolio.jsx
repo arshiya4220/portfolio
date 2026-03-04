@@ -1,7 +1,6 @@
 import React from 'react'
 import ShowOff from '../assets/Portfolio/ShowOff.png'
 import AppleClone from '../assets/Portfolio/AppleClone.png'
-import Portfolioo from '../assets/Portfolio/portfolioo.png'
 import GrubblyClone from '../assets/Portfolio/GrubblyClone.png'
 import Pwd from '../assets/Portfolio/pwd_mngr.png'
 

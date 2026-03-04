@@ -3,7 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { LuSchool } from "react-icons/lu";
 import { TbSchool } from "react-icons/tb";
-import { HiBookmark, HiDesktopComputer, HiSortAscending, HiSortDescending, HiSparkles, HiLightBulb } from 'react-icons/hi';
+import { HiDesktopComputer, HiSortAscending, HiSortDescending, HiSparkles, HiLightBulb } from 'react-icons/hi';
 
 const Education = () => {
     return (
